@@ -1,0 +1,20 @@
+{
+  "name": "backupd",
+  "version": "1.0.0",
+  "description": "Backup service which pushes to amazon cloud drive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "clouddrive": "^0.2.2",
+    "events-intercept": "^2.0.0",
+    "express": "^4.13.3",
+    "ftpd": "^0.2.12",
+    "moment": "^2.10.6",
+    "multer": "^1.1.0"
+  }
+}
