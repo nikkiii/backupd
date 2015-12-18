@@ -1,6 +1,13 @@
 var Request = require('request');
 var Url = require('url');
 
+/**
+ * NOTE! Both of the functions in this file were taken out of clouddrive-node.
+ * They were replaced with ones that allow us to specify a redirect uri.
+ *
+ * @param Account
+ * @param redirect_uri
+ */
 module.exports = function(Account, redirect_uri) {
 	Account.prototype.renewAuthorization = function(callback) {
 		var self = this;

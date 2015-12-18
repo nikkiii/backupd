@@ -56,3 +56,12 @@ Supported operations are as follows:
 - Listing files/directories
 - Creating directories
 - Deleting directories/files
+
+## Contributing
+
+Got a feature or better way to do something? Feel free to make a pull request. This is just a proof of concept mostly, and the ftp implementation leaves a lot to be desired.
+
+To keep the code clean, we ask that you follow the following conventions:
+
+- Use tabs, not spaces
+- Follow the existing style, i.e. don't change the formatting half way through the file
