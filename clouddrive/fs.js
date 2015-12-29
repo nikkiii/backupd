@@ -23,7 +23,7 @@ module.exports = function(config, CloudDrive, account, opts) {
 
 	NodeStat.prototype.isFile = function() {
 		return this.node.isFile();
-	}
+	};
 
 	NodeStat.prototype.isDirectory = function() {
 		return this.node.isFolder();
@@ -157,8 +157,8 @@ module.exports = function(config, CloudDrive, account, opts) {
 
 			var fileStream = fs.createWriteStream(localPath);
 
-			if (opts.aes) {
-				var cipher = crypto.createCipher('aes-256-cbc', config.key);
+			if (opts.aes || opts.key) {
+				var cipher = crypto.createCipher('aes-256-cbc', opts.key || config.key);
 				fileStream = cipher.pipe(fileStream);
 			}
 

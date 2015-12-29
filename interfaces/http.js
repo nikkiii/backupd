@@ -77,10 +77,10 @@ module.exports = function(config, CloudDrive, account) {
 
 		var input = fs.createReadStream(req.file.path);
 
-		if (req.auth.opts.aes) {
+		if (req.auth.opts.aes || req.auth.opts.key) {
 			localPath += '.enc';
 
-			var cipher = crypto.createCipher('aes-256-cbc', config.key);
+			var cipher = crypto.createCipher('aes-256-cbc', req.auth.opts.key || config.key);
 			input = input.pipe(cipher);
 		}
 
