@@ -1,4 +1,5 @@
-var config = require('./config');
+var config = require('./config'),
+	moment = require('moment');
 
 module.exports = {
 	userExists : function(type, username) {

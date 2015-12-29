@@ -4,7 +4,6 @@ var express = require('express'),
 	upload = multer({ dest: 'files/uploads/' }),
 	fs = require('fs'),
 	crypto = require('crypto'),
-	moment = require('moment'),
 	http = require('http'),
 	https = require('https');
 
