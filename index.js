@@ -32,6 +32,8 @@ new SQLite({
 				return;
 			}
 
+			console.log('Successfully authorized.');
+
 			if (config.http.enabled) {
 				require('./interfaces/http')(config, CloudDrive, account);
 			}

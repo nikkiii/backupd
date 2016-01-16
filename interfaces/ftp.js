@@ -7,8 +7,8 @@ module.exports = function(config, CloudDrive, account) {
 	var fs = require('fs'),
 		server,
 		options = {
-			host: '127.0.0.1',
-			port: 7002,
+			host: config.ftp.host || '0.0.0.0',
+			port: config.ftp.port,
 			tls: null
 		};
 

@@ -13,14 +13,15 @@ module.exports = {
 
 		var obj = config.auth.global[username] || config.auth[type][username];
 
-		if (typeof obj == 'object') {
-			return obj.password == 'password' ? obj : null;
+		if (obj.password != password) {
+			return false;
 		}
 
-		return {
-			root : '/',
-			aes : true
-		};
+		if (!('root' in obj)) {
+			obj.root = '/';
+		}
+
+		return obj;
 	},
 
 	pathFor : function (type, username) {
@@ -37,8 +38,8 @@ module.exports = {
 		var path = obj.root;
 
 		path = path.replace(/\{username\}/, username);
-		path = path.replace(/\{moment\|(.*?)\}/, function(format) {
-			return moment().format(format);
+		path = path.replace(/\{moment\|(.*?)\}/, function(match) {
+			return moment().format(match[1]);
 		});
 
 		return path;
