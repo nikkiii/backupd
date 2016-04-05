@@ -1,6 +1,6 @@
 # BackupD
 
-A simple backup http server to store backups on Amazon Cloud Drive without all the fuss of the API.
+A simple backup http server to store backups on Amazon Cloud Drive without all the fuss of the API. It is planned that the server will eventually use [AbstractFS](https://github.com/AbstractFS/node-abstractfs) instead, providing interfaces to multiple services under one server.
 
 Note: Amazon states the service is for non commercial use. Use at your own risk to do more than store personal backups.
 
